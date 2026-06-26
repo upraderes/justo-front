@@ -1,0 +1,122 @@
+{
+  "meta": {
+    "title": "Justo — Your receipts and expenses, made simple",
+    "description": "Justo is the mobile app that helps you track receipts, manage warranties and split expenses fairly. Simple, clear, just."
+  },
+  "nav": {
+    "about": "About",
+    "how": "How it works",
+    "team": "Team",
+    "download": "Download",
+    "support": "Support",
+    "partner": "Become a partner",
+    "cta": "Download the app"
+  },
+  "hero": {
+    "eyebrow": "The fair-expenses app",
+    "title": "Your receipts and expenses, finally under control.",
+    "subtitle": "Justo brings your receipts, warranties and shared expenses together in one clear, elegant app. Keep every proof of purchase at your fingertips.",
+    "ctaPrimary": "Download the app",
+    "ctaSecondary": "Discover Justo"
+  },
+  "about": {
+    "eyebrow": "About the app",
+    "title": "Everything that matters, in one place",
+    "lead": "Justo digitizes your receipts and invoices, alerts you before warranties expire, and makes splitting expenses transparent — with friends, partners or flatmates.",
+    "features": [
+      {
+        "title": "Digitized receipts",
+        "body": "Scan or import your receipts. They are sorted, searchable and always available."
+      },
+      {
+        "title": "Tracked warranties",
+        "body": "Justo detects warranty periods and warns you before they expire."
+      },
+      {
+        "title": "Shared expenses",
+        "body": "Split costs in seconds and see who owes what — no math required."
+      },
+      {
+        "title": "Protected data",
+        "body": "Your records are encrypted and you stay the sole owner of your data."
+      }
+    ]
+  },
+  "how": {
+    "eyebrow": "How it works",
+    "title": "Three steps, no more",
+    "lead": "Getting started with Justo takes less than a minute.",
+    "steps": [
+      {
+        "title": "Download and create your account",
+        "body": "Install Justo from the App Store or Google Play and create your account in seconds."
+      },
+      {
+        "title": "Add your receipts",
+        "body": "Snap a receipt or import an invoice — Justo extracts the key details automatically."
+      },
+      {
+        "title": "Track and share",
+        "body": "Find your warranties and stats, and split expenses with your circle in one tap."
+      }
+    ]
+  },
+  "team": {
+    "eyebrow": "The team",
+    "title": "A small team, a high bar",
+    "lead": "Justo is crafted in France by a team passionate about simple, useful products, with one obsession: saving you time and peace of mind.",
+    "values": [
+      {
+        "title": "Simplicity",
+        "body": "We strip away everything non-essential and keep only what's useful."
+      },
+      {
+        "title": "Trust",
+        "body": "Your data is yours. Transparency and security come first."
+      },
+      {
+        "title": "Closeness",
+        "body": "We listen to our users and improve Justo every week."
+      }
+    ]
+  },
+  "download": {
+    "eyebrow": "Download",
+    "title": "Available on iOS and Android",
+    "lead": "Download Justo for free and take back control of your expenses today.",
+    "appStore": "Download on the App Store",
+    "googlePlay": "Get it on Google Play",
+    "note": "Free. No ads. No commitment."
+  },
+  "support": {
+    "eyebrow": "Support",
+    "title": "Have a question? We're here",
+    "lead": "Our support team replies quickly and with a smile.",
+    "email": "support@justodot.com",
+    "emailLabel": "Email us",
+    "faqLabel": "Read the FAQ",
+    "responseTime": "Reply within 24 business hours."
+  },
+  "partner": {
+    "eyebrow": "Partners & founders",
+    "title": "Let's build Justo together",
+    "lead": "Are you a merchant, creator or investor? Join the Justo journey as a partner or founding member.",
+    "bullets": [
+      "Early access to new features",
+      "Visibility with our growing community",
+      "Dedicated support from our team"
+    ],
+    "cta": "Become a partner",
+    "email": "partners@justodot.com"
+  },
+  "footer": {
+    "tagline": "Fair expenses, made simple.",
+    "rights": "All rights reserved.",
+    "language": "Language"
+  },
+  "a11y": {
+    "menu": "Open menu",
+    "close": "Close menu",
+    "switchLang": "Switch language"
+  }
+}
