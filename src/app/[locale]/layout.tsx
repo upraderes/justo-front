@@ -19,19 +19,20 @@ export function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
-  if (!isLocale(params.locale)) {
+  const { locale } = await params;
+  if (!isLocale(locale)) {
     return {};
   }
-  const dict = getDictionary(params.locale);
+  const dict = getDictionary(locale);
   const baseUrl = 'https://justodot.com';
 
   return {
     title: dict.meta.title,
     description: dict.meta.description,
     alternates: {
-      canonical: `/${params.locale}`,
+      canonical: `/${locale}`,
       languages: {
         fr: '/fr',
         en: '/en',
@@ -40,9 +41,9 @@ export async function generateMetadata({
     openGraph: {
       title: dict.meta.title,
       description: dict.meta.description,
-      url: `${baseUrl}/${params.locale}`,
+      url: `${baseUrl}/${locale}`,
       siteName: 'Justo',
-      locale: params.locale === 'fr' ? 'fr_FR' : 'en_US',
+      locale: locale === 'fr' ? 'fr_FR' : 'en_US',
       type: 'website',
       images: [
         {
@@ -56,17 +57,18 @@ export async function generateMetadata({
   };
 }
 
-export default function LocaleLayout({
+export default async function LocaleLayout({
   children,
   params,
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
-  if (!isLocale(params.locale)) {
+  const { locale: localeParam } = await params;
+  if (!isLocale(localeParam)) {
     notFound();
   }
-  const locale = params.locale as Locale;
+  const locale = localeParam as Locale;
   const dict = getDictionary(locale);
 
   return (

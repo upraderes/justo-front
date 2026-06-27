@@ -9,11 +9,16 @@ import Download from '@/components/sections/Download';
 import Support from '@/components/sections/Support';
 import Partner from '@/components/sections/Partner';
 
-export default function HomePage({ params }: { params: { locale: string } }) {
-  if (!isLocale(params.locale)) {
+export default async function HomePage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale: localeParam } = await params;
+  if (!isLocale(localeParam)) {
     notFound();
   }
-  const locale = params.locale as Locale;
+  const locale = localeParam as Locale;
   const dict = getDictionary(locale);
 
   return (

@@ -14,19 +14,29 @@ export default nextConfig;
 ```
 
 ## `Containerfile` (multi-stage)
-> Use `node:20-slim` (Debian/glibc), **not** `node:20-alpine`. Alpine uses musl libc and
-> fails to load the Next.js SWC binary resolved from a glibc/darwin lockfile
-> (`Failed to load SWC binary for linux/arm64`).
+Two base images, chosen deliberately:
+- **Build stages** use `node:*-slim` (Debian/glibc), **not** `node:*-alpine`. Alpine uses musl
+  libc and fails to load the Next.js SWC binary resolved from a glibc/darwin lockfile
+  (`Failed to load SWC binary for linux/arm64`).
+- **Runtime stage** uses **`cgr.dev/chainguard/node`** (Wolfi), a minimal, continuously-patched
+  image with no perl/ncurses/npm and always-current OpenSSL. This keeps the published image at
+  **zero known CVEs**. `node:*-slim` is *not* used at runtime because Debian's `perl-base`/
+  `ncurses` carry CRITICAL/HIGH CVEs with no available fix, and `distroless` lags on freshly
+  disclosed OpenSSL CVEs. Chainguard's entrypoint is already `node` and the default user is
+  non-root (uid 65532), so no shell/user setup is needed.
+
+> Image-level vuln scanning: `trivy image --severity CRITICAL,HIGH justo-front:latest`
+> (or scan a `podman save` tarball with `trivy image --input`).
 
 ```dockerfile
 # ---- deps ----
-FROM node:20-slim AS deps
+FROM node:24-slim AS deps
 WORKDIR /app
 COPY package.json package-lock.json* ./
 RUN npm ci
 
 # ---- build ----
-FROM node:20-slim AS builder
+FROM node:24-slim AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
@@ -34,20 +44,22 @@ ENV NEXT_TELEMETRY_DISABLED=1
 RUN npm run build
 
 # ---- runner ----
-FROM node:20-slim AS runner
+FROM cgr.dev/chainguard/node:latest AS runner
 WORKDIR /app
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
 ENV PORT=3000
-RUN groupadd --system --gid 1001 nodejs \
-  && useradd --system --uid 1001 --gid nodejs nextjs
-COPY --from=builder /app/public ./public
-COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
-COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
-USER nextjs
+ENV HOSTNAME=0.0.0.0
+COPY --from=builder --chown=65532:65532 /app/public ./public
+COPY --from=builder --chown=65532:65532 /app/.next/standalone ./
+COPY --from=builder --chown=65532:65532 /app/.next/static ./.next/static
 EXPOSE 3000
-CMD ["node", "server.js"]
+CMD ["server.js"]
 ```
+
+> **App-dependency CVEs:** `postcss` is pinned to a patched range via a `$postcss` override in
+> `package.json` (the override mirrors the direct devDependency to avoid npm `EOVERRIDE`). Run
+> `npm audit` to check app deps.
 
 ## `.containerignore`
 ```

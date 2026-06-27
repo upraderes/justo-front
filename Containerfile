@@ -1,12 +1,12 @@
 # ---- deps ----
 # Debian-slim (glibc) base avoids the Alpine/musl SWC binary mismatch.
-FROM node:20-slim AS deps
+FROM node:24-slim AS deps
 WORKDIR /app
 COPY package.json package-lock.json* ./
 RUN npm ci
 
 # ---- build ----
-FROM node:20-slim AS builder
+FROM node:24-slim AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
@@ -14,16 +14,18 @@ ENV NEXT_TELEMETRY_DISABLED=1
 RUN npm run build
 
 # ---- runner ----
-FROM node:20-slim AS runner
+# Chainguard's minimal, continuously-patched node image: no perl/ncurses/npm and
+# always-current OpenSSL — typically zero known CVEs, unlike node:*-slim (perl/
+# ncurses CRITICALs with no Debian fix) or distroless (lags on fresh CVEs).
+# Entrypoint is already `node`; default user is non-root (uid 65532).
+FROM cgr.dev/chainguard/node:latest AS runner
 WORKDIR /app
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
 ENV PORT=3000
-RUN groupadd --system --gid 1001 nodejs \
-  && useradd --system --uid 1001 --gid nodejs nextjs
-COPY --from=builder /app/public ./public
-COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
-COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
-USER nextjs
+ENV HOSTNAME=0.0.0.0
+COPY --from=builder --chown=65532:65532 /app/public ./public
+COPY --from=builder --chown=65532:65532 /app/.next/standalone ./
+COPY --from=builder --chown=65532:65532 /app/.next/static ./.next/static
 EXPOSE 3000
-CMD ["node", "server.js"]
+CMD ["server.js"]
