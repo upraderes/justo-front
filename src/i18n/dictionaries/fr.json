@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Justo — Vos reçus et dépenses, en toute simplicité",
-    "description": "Justo est l'application mobile qui vous aide à suivre vos reçus, gérer vos garanties et partager vos dépenses équitablement. Simple, clair, juste."
+    "description": "Justo est l'application mobile qui vous aide à suivre vos reçus personnels et professionnels. Simple, clair, juste."
   },
   "nav": {
     "about": "À propos",
@@ -13,28 +13,28 @@
     "cta": "Télécharger l'app"
   },
   "hero": {
-    "eyebrow": "L'app des dépenses justes",
+    "eyebrow": "L'app de vos justificatifs",
     "title": "Vos reçus et vos dépenses, enfin sous contrôle.",
-    "subtitle": "Justo réunit vos reçus, vos garanties et vos dépenses partagées dans une seule application claire et élégante. Gardez chaque preuve d'achat à portée de main.",
+    "subtitle": "Justo stocke vos reçus personnels et professionnels dans une seule application claire et élégante. Gardez chaque preuve d'achat à portée de main. Frais réel ou abattement forfaitaire? Justo vous permet de suivre l'état de vos dépenses et de faire un choix éclairé.",
     "ctaPrimary": "Télécharger l'app",
     "ctaSecondary": "Découvrir Justo"
   },
   "about": {
     "eyebrow": "À propos de l'app",
     "title": "Tout ce qui compte, au même endroit",
-    "lead": "Justo numérise vos tickets de caisse et factures, vous alerte avant la fin de vos garanties et rend le partage de dépenses transparent entre amis, en couple ou en colocation.",
+    "lead": "Justo numérise vos tickets de caisse et factures.",
     "features": [
       {
         "title": "Reçus numérisés",
         "body": "Scannez ou importez vos reçus. Ils sont classés, recherchables et toujours disponibles."
       },
       {
-        "title": "Garanties suivies",
-        "body": "Justo détecte les durées de garantie et vous prévient avant qu'elles expirent."
+        "title": "Analyse budgétaire",
+        "body": "Justo analyse vos justificatifs et détecte ce qui est le plus avantageux pour vous lors de votre déclaration fiscale."
       },
       {
-        "title": "Dépenses partagées",
-        "body": "Répartissez les dépenses en quelques secondes et voyez qui doit quoi, sans calcul."
+        "title": "Notre ambition",
+        "body": "Vous libérez du temps et de l'énergie en vous accompagnant dans la gestion de vos frais. "
       },
       {
         "title": "Données protégées",
@@ -48,23 +48,23 @@
     "lead": "Commencer avec Justo prend moins d'une minute.",
     "steps": [
       {
-        "title": "Téléchargez et créez votre compte",
+        "title": "Téléchargez l'application",
         "body": "Installez Justo depuis l'App Store ou Google Play et créez votre compte en quelques secondes."
       },
       {
-        "title": "Ajoutez vos reçus",
-        "body": "Prenez en photo un ticket ou importez une facture : Justo extrait les informations clés automatiquement."
+        "title": "Ajoutez vos reçus et justificatifs",
+        "body": "Prenez en photo un ticket ou importez une facture. Justo les organisera par catégorie."
       },
       {
-        "title": "Suivez et partagez",
-        "body": "Retrouvez vos garanties, vos statistiques et partagez les dépenses avec vos proches en un geste."
+        "title": "Rapports de dépense",
+        "body": "Retrouvez directement dans l'app s'il vous est préférables de passer en frais réel ou au forfait de 10% et extrayé directement le montant déductible de vos dépenses années après années."
       }
     ]
   },
   "team": {
     "eyebrow": "L'équipe",
     "title": "Une petite équipe, une grande exigence",
-    "lead": "Justo est conçu en France par une équipe passionnée de produits simples et utiles, avec une obsession : vous faire gagner du temps et de la sérénité.",
+    "lead": "Justo est conçu en France par une équipe passionnée de simplicité et par les choses utiles, avec une obsession : vous faire gagner du temps et de la sérénité.",
     "values": [
       {
         "title": "Simplicité",
@@ -83,7 +83,7 @@
   "download": {
     "eyebrow": "Télécharger",
     "title": "Disponible sur iOS et Android",
-    "lead": "Téléchargez Justo gratuitement et reprenez le contrôle de vos dépenses dès aujourd'hui.",
+    "lead": "Téléchargez Justo gratuitement et reprenez le contrôle de vos justificatifs dès aujourd'hui.",
     "appStore": "Télécharger sur l'App Store",
     "googlePlay": "Disponible sur Google Play",
     "note": "Gratuit. Sans publicité. Sans engagement."
@@ -110,7 +110,7 @@
     "email": "partners@justodot.com"
   },
   "footer": {
-    "tagline": "Les dépenses justes, simplement.",
+    "tagline": "Vos frais et justificatifs, à portée de main.",
     "rights": "Tous droits réservés.",
     "language": "Langue"
   },

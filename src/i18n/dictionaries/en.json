@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Justo — Your receipts and expenses, made simple",
-    "description": "Justo is the mobile app that helps you track receipts, manage warranties and split expenses fairly. Simple, clear, just."
+    "description": "Justo is the mobile app that helps you track your personal and professional receipts. Simple, clear, just."
   },
   "nav": {
     "about": "About",
@@ -13,32 +13,32 @@
     "cta": "Download the app"
   },
   "hero": {
-    "eyebrow": "The fair-expenses app",
+    "eyebrow": "The app for your receipts",
     "title": "Your receipts and expenses, finally under control.",
-    "subtitle": "Justo brings your receipts, warranties and shared expenses together in one clear, elegant app. Keep every proof of purchase at your fingertips.",
+    "subtitle": "Justo stores your personal and professional receipts in one clear, elegant app. Keep every proof of purchase at your fingertips. Itemized expenses or the standard deduction? Justo lets you track your spending and make an informed choice.",
     "ctaPrimary": "Download the app",
     "ctaSecondary": "Discover Justo"
   },
   "about": {
     "eyebrow": "About the app",
     "title": "Everything that matters, in one place",
-    "lead": "Justo digitizes your receipts and invoices, alerts you before warranties expire, and makes splitting expenses transparent — with friends, partners or flatmates.",
+    "lead": "Justo digitizes your receipts and invoices.",
     "features": [
       {
         "title": "Digitized receipts",
         "body": "Scan or import your receipts. They are sorted, searchable and always available."
       },
       {
-        "title": "Tracked warranties",
-        "body": "Justo detects warranty periods and warns you before they expire."
+        "title": "Budget analysis",
+        "body": "Justo analyzes your receipts and detects what is most advantageous for you on your tax return."
       },
       {
-        "title": "Shared expenses",
-        "body": "Split costs in seconds and see who owes what — no math required."
+        "title": "Our ambition",
+        "body": "Freeing up your time and energy by supporting you in managing your expenses."
       },
       {
         "title": "Protected data",
-        "body": "Your records are encrypted and you stay the sole owner of your data."
+        "body": "Your receipts are encrypted and you remain the sole owner of your data."
       }
     ]
   },
@@ -48,23 +48,23 @@
     "lead": "Getting started with Justo takes less than a minute.",
     "steps": [
       {
-        "title": "Download and create your account",
+        "title": "Download the app",
         "body": "Install Justo from the App Store or Google Play and create your account in seconds."
       },
       {
-        "title": "Add your receipts",
-        "body": "Snap a receipt or import an invoice — Justo extracts the key details automatically."
+        "title": "Add your receipts and documents",
+        "body": "Snap a receipt or import an invoice. Justo will organize them by category."
       },
       {
-        "title": "Track and share",
-        "body": "Find your warranties and stats, and split expenses with your circle in one tap."
+        "title": "Expense reports",
+        "body": "See directly in the app whether you are better off itemizing your actual expenses or taking the 10% standard deduction, and extract the deductible amount of your expenses year after year."
       }
     ]
   },
   "team": {
     "eyebrow": "The team",
     "title": "A small team, a high bar",
-    "lead": "Justo is crafted in France by a team passionate about simple, useful products, with one obsession: saving you time and peace of mind.",
+    "lead": "Justo is designed in France by a team passionate about simplicity and useful things, with one obsession: saving you time and peace of mind.",
     "values": [
       {
         "title": "Simplicity",
@@ -83,7 +83,7 @@
   "download": {
     "eyebrow": "Download",
     "title": "Available on iOS and Android",
-    "lead": "Download Justo for free and take back control of your expenses today.",
+    "lead": "Download Justo for free and take back control of your receipts today.",
     "appStore": "Download on the App Store",
     "googlePlay": "Get it on Google Play",
     "note": "Free. No ads. No commitment."
@@ -110,7 +110,7 @@
     "email": "partners@justodot.com"
   },
   "footer": {
-    "tagline": "Fair expenses, made simple.",
+    "tagline": "Your expenses and receipts, at your fingertips.",
     "rights": "All rights reserved.",
     "language": "Language"
   },
