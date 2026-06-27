@@ -43,7 +43,7 @@ export async function generateMetadata({
       description: dict.meta.description,
       url: `${baseUrl}/${locale}`,
       siteName: 'Justo',
-      locale: locale === 'fr' ? 'fr_FR' : 'en_US',
+      locale: locale === 'en' ? 'en_US' : 'fr_FR',
       type: 'website',
       images: [
         {

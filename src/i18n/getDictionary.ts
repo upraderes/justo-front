@@ -5,8 +5,8 @@ import en from './dictionaries/en.json';
 export type Dictionary = typeof fr;
 
 const dictionaries: Record<Locale, Dictionary> = {
-  fr,
-  en: en as Dictionary,
+  en,
+  fr: fr as Dictionary,
 };
 
 export function getDictionary(locale: Locale): Dictionary {
