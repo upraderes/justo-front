@@ -1,0 +1,79 @@
+name: Build container image
+
+# Flow: login → build → scan (Trivy + Grype) → push, against an external registry.
+# Image name and version come from package.json; the commit SHA is appended to make
+# each build's tag unique and immutable: <registry>/<name>:<version>.<sha>.
+# Pull requests build + scan only (no login / push).
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    # Provides the REGISTRY / REGISTRY_USERNAME / REGISTRY_PASSWORD secrets.
+    environment: build-image
+    permissions:
+      contents: read
+    env:
+      REGISTRY: ${{ secrets.REGISTRY }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Resolve image and tag
+        run: |
+          NAME="$(node -p "require('./package.json').name")"
+          VERSION="$(node -p "require('./package.json').version")"
+          echo "IMAGE=${REGISTRY}/${NAME}" >> "$GITHUB_ENV"
+          echo "TAG=${VERSION}.${GITHUB_SHA}" >> "$GITHUB_ENV"
+          echo "Image: ${REGISTRY}/${NAME}:${VERSION}.${GITHUB_SHA}"
+
+      # 1) LOGIN — external registry credentials from the build-image environment.
+      - name: Log in to registry
+        if: github.event_name != 'pull_request'
+        run: echo "${{ secrets.REGISTRY_PASSWORD }}" | podman login "$REGISTRY" --username "${{ secrets.REGISTRY_USERNAME }}" --password-stdin
+
+      # 2) BUILD
+      - name: Build image with Podman
+        run: |
+          podman build \
+            --tag "${IMAGE}:${TAG}" \
+            --tag "${IMAGE}:latest" \
+            --file Containerfile \
+            .
+
+      # 3) SCAN — export once so both scanners read identical bytes; either failing
+      #    on CRITICAL/HIGH stops the job before the push step.
+      - name: Export image to archive
+        run: podman save --format docker-archive -o "${RUNNER_TEMP}/image.tar" "${IMAGE}:${TAG}"
+
+      - name: Install Trivy
+        run: curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin
+
+      - name: Trivy scan (fail on CRITICAL)
+        run: |
+          trivy image \
+            --input "${RUNNER_TEMP}/image.tar" \
+            --scanners vuln \
+            --severity CRITICAL \
+            --exit-code 1 \
+            --no-progress \
+            --format table
+
+      - name: Install Grype
+        run: curl -sSfL https://raw.githubusercontent.com/anchore/grype/main/install.sh | sh -s -- -b /usr/local/bin
+
+      - name: Grype scan (fail on CRITICAL)
+        run: grype "docker-archive:${RUNNER_TEMP}/image.tar" --fail-on critical
+
+      # 4) PUSH — only after a clean build + scan, and never for PRs.
+      - name: Push image
+        if: github.event_name != 'pull_request'
+        run: |
+          podman push "${IMAGE}:${TAG}"
+          podman push "${IMAGE}:latest"
