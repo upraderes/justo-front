@@ -112,7 +112,12 @@
   "footer": {
     "tagline": "Your expenses and receipts, at your fingertips.",
     "rights": "All rights reserved.",
-    "language": "Language"
+    "language": "Language",
+    "legal": {
+      "mentions": "Legal notice",
+      "privacy": "Privacy policy",
+      "terms": "Terms of use"
+    }
   },
   "a11y": {
     "menu": "Open menu",

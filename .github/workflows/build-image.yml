@@ -77,3 +77,16 @@ jobs:
         run: |
           podman push "${IMAGE}:${TAG}"
           podman push "${IMAGE}:latest"
+
+      # Cleanup — always runs, even if build/scan/push failed above. `|| true`
+      # keeps cleanup from masking the real failure that should fail the job.
+      - name: Log out of registry
+        if: ${{ always() && github.event_name != 'pull_request' }}
+        run: podman logout "$REGISTRY" || true
+
+      - name: Clean runner
+        if: ${{ always() }}
+        run: |
+          rm -f "${RUNNER_TEMP}/image.tar" || true
+          podman rmi --all --force || true
+          podman system prune --all --force || true

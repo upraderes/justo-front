@@ -112,7 +112,12 @@
   "footer": {
     "tagline": "Vos frais et justificatifs, à portée de main.",
     "rights": "Tous droits réservés.",
-    "language": "Langue"
+    "language": "Langue",
+    "legal": {
+      "mentions": "Mentions légales",
+      "privacy": "Politique de confidentialité",
+      "terms": "CGU"
+    }
   },
   "a11y": {
     "menu": "Ouvrir le menu",

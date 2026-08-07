@@ -55,24 +55,55 @@ export default function Footer({ dict, locale }: FooterProps) {
           </nav>
         </div>
 
-        <div className="mt-12 flex flex-col gap-3 border-t border-white/10 pt-6 text-sm text-white/60 sm:flex-row sm:items-center sm:justify-between">
-          <p>
-            © {year} Justo. {dict.footer.rights}
-          </p>
-          <p className="flex gap-4">
-            <a
-              href="https://justodot.com"
-              className="transition-colors hover:text-green-400"
-            >
-              justodot.com
-            </a>
-            <a
-              href="https://justodot.fr"
-              className="transition-colors hover:text-green-400"
-            >
-              justodot.fr
-            </a>
-          </p>
+        <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-6 text-sm text-white/60">
+          <nav aria-label="Legal">
+            <ul className="flex flex-wrap gap-x-6 gap-y-2">
+              <li>
+                <a
+                  href={`/${locale}/mentions-legales`}
+                  className="transition-colors hover:text-green-400"
+                >
+                  {dict.footer.legal.mentions}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={`/${locale}/politique-de-confidentialite`}
+                  className="transition-colors hover:text-green-400"
+                >
+                  {dict.footer.legal.privacy}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={`/${locale}/cgu`}
+                  className="transition-colors hover:text-green-400"
+                >
+                  {dict.footer.legal.terms}
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <p>
+              © {year} Justo. {dict.footer.rights}
+            </p>
+            <p className="flex gap-4">
+              <a
+                href="https://justodot.com"
+                className="transition-colors hover:text-green-400"
+              >
+                justodot.com
+              </a>
+              <a
+                href="https://justodot.fr"
+                className="transition-colors hover:text-green-400"
+              >
+                justodot.fr
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>
