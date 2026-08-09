@@ -30,7 +30,7 @@ export default async function AppPrivacyPolicyPage({
     <LegalLayout
       locale={locale}
       title="Politique de confidentialité de l'application Justo"
-      updatedAt="7 août 2026"
+      updatedAt="9 août 2026"
     >
       <p className={p}>
         Cette politique décrit comment l&apos;application mobile Justo (iOS
@@ -170,10 +170,10 @@ export default async function AppPrivacyPolicyPage({
         <h2 className={h2}>Évolution de cette politique</h2>
         <p className={p}>
           Si l&apos;application venait à évoluer (ajout d&apos;un compte,
-          d&apos;une synchronisation en ligne ou d&apos;un service tiers),
-          cette politique serait mise à jour avant la mise en service de
-          cette évolution, et la date en haut de cette page serait actualisée
-          en conséquence.
+          d&apos;une synchronisation en ligne ou d&apos;un service tiers,
+          par exemple pour de la publicité), cette politique serait mise à
+          jour avant la mise en service de cette évolution, et la date en
+          haut de cette page serait actualisée en conséquence.
         </p>
       </section>
     </LegalLayout>
