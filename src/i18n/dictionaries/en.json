@@ -1,0 +1,127 @@
+{
+  "meta": {
+    "title": "Justo — Your receipts and expenses, made simple",
+    "description": "Justo is the mobile app that helps you track your personal and professional receipts. Simple, clear, just."
+  },
+  "nav": {
+    "about": "About",
+    "how": "How it works",
+    "team": "Team",
+    "download": "Download",
+    "support": "Support",
+    "partner": "Become a partner",
+    "cta": "Download the app"
+  },
+  "hero": {
+    "eyebrow": "The app for your receipts",
+    "title": "Your receipts and expenses, finally under control.",
+    "subtitle": "Justo stores your personal and professional receipts in one clear, elegant app. Keep every proof of purchase at your fingertips. Itemized expenses or the standard deduction? Justo lets you track your spending and make an informed choice.",
+    "ctaPrimary": "Download the app",
+    "ctaSecondary": "Discover Justo"
+  },
+  "about": {
+    "eyebrow": "About the app",
+    "title": "Everything that matters, in one place",
+    "lead": "Justo digitizes your receipts and invoices.",
+    "features": [
+      {
+        "title": "Digitized receipts",
+        "body": "Scan or import your receipts. They are sorted, searchable and always available."
+      },
+      {
+        "title": "Budget analysis",
+        "body": "Justo analyzes your receipts and detects what is most advantageous for you on your tax return."
+      },
+      {
+        "title": "Our ambition",
+        "body": "Freeing up your time and energy by supporting you in managing your expenses."
+      },
+      {
+        "title": "Protected data",
+        "body": "Your receipts are encrypted and you remain the sole owner of your data."
+      }
+    ]
+  },
+  "how": {
+    "eyebrow": "How it works",
+    "title": "Three steps, no more",
+    "lead": "Getting started with Justo takes less than a minute.",
+    "steps": [
+      {
+        "title": "Download the app",
+        "body": "Install Justo from the App Store or Google Play and create your account in seconds."
+      },
+      {
+        "title": "Add your receipts and documents",
+        "body": "Snap a receipt or import an invoice. Justo will organize them by category."
+      },
+      {
+        "title": "Expense reports",
+        "body": "See directly in the app whether you are better off itemizing your actual expenses or taking the 10% standard deduction, and extract the deductible amount of your expenses year after year."
+      }
+    ]
+  },
+  "team": {
+    "eyebrow": "The team",
+    "title": "A small team, a high bar",
+    "lead": "Justo is designed in France by a team passionate about simplicity and useful things, with one obsession: saving you time and peace of mind.",
+    "values": [
+      {
+        "title": "Simplicity",
+        "body": "We strip away everything non-essential and keep only what's useful."
+      },
+      {
+        "title": "Trust",
+        "body": "Your data is yours. Transparency and security come first."
+      },
+      {
+        "title": "Closeness",
+        "body": "We listen to our users and improve Justo every week."
+      }
+    ]
+  },
+  "download": {
+    "eyebrow": "Download",
+    "title": "Available on iOS and Android",
+    "lead": "Download Justo for free and take back control of your receipts today.",
+    "appStore": "Download on the App Store",
+    "googlePlay": "Get it on Google Play",
+    "note": "Free. No commitment."
+  },
+  "support": {
+    "eyebrow": "Support",
+    "title": "Have a question? We're here",
+    "lead": "Our support team replies quickly and with a smile.",
+    "email": "support@justodot.com",
+    "emailLabel": "Email us",
+    "faqLabel": "Read the FAQ",
+    "responseTime": "Reply within 24 business hours."
+  },
+  "partner": {
+    "eyebrow": "Partners & founders",
+    "title": "Let's build Justo together",
+    "lead": "Are you a merchant, creator or investor? Join the Justo journey as a partner or founding member.",
+    "bullets": [
+      "Early access to new features",
+      "Visibility with our growing community",
+      "Dedicated support from our team"
+    ],
+    "cta": "Become a partner",
+    "email": "partners@justodot.com"
+  },
+  "footer": {
+    "tagline": "Your expenses and receipts, at your fingertips.",
+    "rights": "All rights reserved.",
+    "language": "Language",
+    "legal": {
+      "mentions": "Legal notice",
+      "privacy": "Privacy policy",
+      "terms": "Terms of use"
+    }
+  },
+  "a11y": {
+    "menu": "Open menu",
+    "close": "Close menu",
+    "switchLang": "Switch language"
+  }
+}

@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Brand */
+  --color-navy-900: #122033;
+  --color-navy-800: #16293d;
+  --color-navy-700: #1f3a53;
+  --color-green-600: #16a34a;
+  --color-green-500: #22c55e;
+  --color-green-400: #4ade80;
+
+  /* Neutrals */
+  --color-bg: #f1f4f6;
+  --color-surface: #ffffff;
+  --color-border: #e2e8f0;
+  --color-muted: #64748b;
+  --color-text: #16293d;
+
+  /* Semantics */
+  --radius-card: 20px;
+  --radius-pill: 9999px;
+  --shadow-card: 0 10px 30px -12px rgba(18, 32, 51, 0.18);
+  --shadow-soft: 0 4px 16px -8px rgba(18, 32, 51, 0.15);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Visible focus ring on interactive elements */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--color-green-500);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Fade-up on scroll */
+.fade-up {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: fade-up 0.4s ease-out forwards;
+}
+
+@keyframes fade-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .fade-up {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}

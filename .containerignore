@@ -1,0 +1,9 @@
+node_modules
+.next
+.git
+docs
+*.md
+Gemini_Generated_Image_*.png
+.github
+.vscode
+npm-debug.log*

@@ -1,0 +1,127 @@
+{
+  "meta": {
+    "title": "Justo — Vos reçus et dépenses, en toute simplicité",
+    "description": "Justo est l'application mobile qui vous aide à suivre vos reçus personnels et professionnels. Simple, clair, juste."
+  },
+  "nav": {
+    "about": "À propos",
+    "how": "Comment ça marche",
+    "team": "L'équipe",
+    "download": "Télécharger",
+    "support": "Support",
+    "partner": "Devenir partenaire",
+    "cta": "Télécharger l'app"
+  },
+  "hero": {
+    "eyebrow": "L'app de vos justificatifs",
+    "title": "Vos reçus et vos dépenses, enfin sous contrôle.",
+    "subtitle": "Justo stocke vos reçus personnels et professionnels dans une seule application claire et élégante. Gardez chaque preuve d'achat à portée de main. Frais réel ou abattement forfaitaire? Justo vous permet de suivre l'état de vos dépenses et de faire un choix éclairé.",
+    "ctaPrimary": "Télécharger l'app",
+    "ctaSecondary": "Découvrir Justo"
+  },
+  "about": {
+    "eyebrow": "À propos de l'app",
+    "title": "Tout ce qui compte, au même endroit",
+    "lead": "Justo numérise vos tickets de caisse et factures.",
+    "features": [
+      {
+        "title": "Reçus numérisés",
+        "body": "Scannez ou importez vos reçus. Ils sont classés, recherchables et toujours disponibles."
+      },
+      {
+        "title": "Analyse budgétaire",
+        "body": "Justo analyse vos justificatifs et détecte ce qui est le plus avantageux pour vous lors de votre déclaration fiscale."
+      },
+      {
+        "title": "Notre ambition",
+        "body": "Vous libérez du temps et de l'énergie en vous accompagnant dans la gestion de vos frais. "
+      },
+      {
+        "title": "Données protégées",
+        "body": "Vos justificatifs sont chiffrés et vous restez seul propriétaire de vos données."
+      }
+    ]
+  },
+  "how": {
+    "eyebrow": "Comment ça marche",
+    "title": "Trois étapes, pas une de plus",
+    "lead": "Commencer avec Justo prend moins d'une minute.",
+    "steps": [
+      {
+        "title": "Téléchargez l'application",
+        "body": "Installez Justo depuis l'App Store ou Google Play et créez votre compte en quelques secondes."
+      },
+      {
+        "title": "Ajoutez vos reçus et justificatifs",
+        "body": "Prenez en photo un ticket ou importez une facture. Justo les organisera par catégorie."
+      },
+      {
+        "title": "Rapports de dépense",
+        "body": "Retrouvez directement dans l'app s'il vous est préférables de passer en frais réel ou au forfait de 10% et extrayé directement le montant déductible de vos dépenses années après années."
+      }
+    ]
+  },
+  "team": {
+    "eyebrow": "L'équipe",
+    "title": "Une petite équipe, une grande exigence",
+    "lead": "Justo est conçu en France par une équipe passionnée de simplicité et par les choses utiles, avec une obsession : vous faire gagner du temps et de la sérénité.",
+    "values": [
+      {
+        "title": "Simplicité",
+        "body": "Nous retirons tout ce qui n'est pas essentiel pour ne garder que l'utile."
+      },
+      {
+        "title": "Confiance",
+        "body": "Vos données vous appartiennent. Transparence et sécurité avant tout."
+      },
+      {
+        "title": "Proximité",
+        "body": "Nous écoutons nos utilisateurs et améliorons Justo chaque semaine."
+      }
+    ]
+  },
+  "download": {
+    "eyebrow": "Télécharger",
+    "title": "Disponible sur iOS et Android",
+    "lead": "Téléchargez Justo gratuitement et reprenez le contrôle de vos justificatifs dès aujourd'hui.",
+    "appStore": "Télécharger sur l'App Store",
+    "googlePlay": "Disponible sur Google Play",
+    "note": "Gratuit. Sans engagement."
+  },
+  "support": {
+    "eyebrow": "Support",
+    "title": "Une question ? Nous sommes là",
+    "lead": "Notre équipe support répond rapidement et avec le sourire.",
+    "email": "support@justodot.com",
+    "emailLabel": "Écrivez-nous",
+    "faqLabel": "Consulter la FAQ",
+    "responseTime": "Réponse sous 24 h ouvrées."
+  },
+  "partner": {
+    "eyebrow": "Partenaires & fondateurs",
+    "title": "Construisons Justo ensemble",
+    "lead": "Vous êtes commerçant, créateur ou investisseur ? Rejoignez l'aventure Justo en tant que partenaire ou membre fondateur.",
+    "bullets": [
+      "Accès anticipé aux nouvelles fonctionnalités",
+      "Visibilité auprès de notre communauté grandissante",
+      "Un accompagnement dédié par notre équipe"
+    ],
+    "cta": "Devenir partenaire",
+    "email": "partners@justodot.com"
+  },
+  "footer": {
+    "tagline": "Vos frais et justificatifs, à portée de main.",
+    "rights": "Tous droits réservés.",
+    "language": "Langue",
+    "legal": {
+      "mentions": "Mentions légales",
+      "privacy": "Politique de confidentialité",
+      "terms": "CGU"
+    }
+  },
+  "a11y": {
+    "menu": "Ouvrir le menu",
+    "close": "Fermer le menu",
+    "switchLang": "Changer de langue"
+  }
+}
